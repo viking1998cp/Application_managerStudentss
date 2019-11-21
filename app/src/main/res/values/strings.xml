@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Application_managerStudentss</string>
+    <string name="title_add">Thêm sinh viên</string>
+    <string name="title_listStudents">Danh sách sinh viên</string>
+    <string name="back">Trở lại</string>
+    <string name="managerStudents">Quản lý sinh viên</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="managerTeacher">Quản lý giáo viên</string>
+    <string name="managerClass">Quản lý lớp</string>
+    <string name="addStudents">Thêm học sinh</string>
+    <string name="title_Detail">Chi tiết học sinh</string>
+    <string name="DetailStudents">Chi tiết học sinh</string>
+</resources>

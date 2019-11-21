@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/group_parent"
+        android:checkableBehavior="single"
+        android:visible="true" >
+        <item android:id="@+id/group_parentStudents"
+            android:icon="@drawable/ic_people_green_24dp"
+            android:title="@string/managerStudents"
+         />
+        <item android:id="@+id/group_parentTeacher"
+            android:icon="@drawable/ic_people_green_24dp"
+            android:title="@string/managerTeacher"
+            />
+        <item android:id="@+id/group_parentClass"
+            android:icon="@drawable/ic_class_green_24dp"
+            android:title="@string/managerClass"
+            />
+    </group>
+    <group android:id="@+id/group_subStudents"
+        android:checkableBehavior="single"
+        android:visible="false">
+        <item
+            android:id="@+id/nav_back"
+            android:icon="@drawable/ic_arrow_back_black_24dp"
+            android:title="@string/back" />
+        <item android:id="@+id/nav_listStudents"
+            android:title="@string/title_listStudents"
+            android:icon="@drawable/ic_format_list_bulleted_green_24dp"
+            />
+        <item android:id="@+id/nav_add"
+            android:title="@string/title_add"
+            android:icon="@drawable/ic_add_circle_outline_green_24dp"
+             />
+    </group>
+</menu>

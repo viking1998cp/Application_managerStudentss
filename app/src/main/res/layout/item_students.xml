@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        tools:context=".Adapter.AdapterRecyclerViewStudents">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_male"
+                android:layout_width="80dp"
+                android:layout_height="80dp"  />
+            <LinearLayout
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:orientation="vertical"
+                android:weightSum="4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textColor="@color/colorBlack"
+                    android:id="@+id/studentsName"
+                    android:gravity="center_vertical"
+                    android:textSize="14dp"
+                    android:text="Họ và tên"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+                <TextView
+                    android:textColor="@color/colorBlack"
+                    android:id="@+id/studentsClass"
+                    android:gravity="center_vertical"
+                    android:textSize="14dp"
+                    android:text="516100"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+                <TextView
+                    android:textColor="@color/colorBlack"
+                    android:id="@+id/studentsBirthDate"
+                    android:gravity="center_vertical"
+                    android:textSize="14dp"
+                    android:text="12/08/1998"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+                <TextView
+                    android:textColor="@color/colorBlack"
+                    android:id="@+id/studentsPoint"
+                    android:gravity="center_vertical"
+                    android:textSize="14dp"
+                    android:text="10.0"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:layout_marginBottom="@dimen/margin_4dp"
+            android:background="@color/colorGray" />
+    </LinearLayout>
+
+</layout>

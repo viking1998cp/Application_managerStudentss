@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginBottom="25dp"
+            android:background="?attr/colorPrimary"
+            app:title="@string/DetailStudents" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tên sinh viên"
+                android:imeOptions="actionNext"
+                android:paddingLeft="8dp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Địa chỉ"
+                android:paddingLeft="8dp"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/etBirthdate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawableLeft="@drawable/ic_date_range_green_24dp"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:text="Ngày sinh"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:layout_marginBottom="16dp"
+
+            android:background="@color/colorGray2" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLiterature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Điểm toán"
+                android:inputType="number"
+                android:paddingLeft="8dp"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ettMath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Điểm văn"
+                android:inputType="number"
+                android:paddingLeft="8dp"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEngLish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Điểm Anh"
+                android:inputType="number"
+                android:paddingLeft="8dp"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Lớp"
+                android:inputType="number"
+                android:paddingLeft="8dp"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/etAverage"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:text="Điểm trung bình"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:layout_marginBottom="16dp"
+
+            android:background="@color/colorGray2" />
+
+        <LinearLayout
+            android:id="@+id/lnEdit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/btCancel"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Hủy"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                app:bootstrapBrand="danger"
+                app:bootstrapSize="lg"
+                app:buttonMode="regular"
+                app:roundedCorners="true"
+                app:showOutline="false" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/btSave"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Lưu"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                app:bootstrapBrand="success"
+                app:bootstrapSize="lg"
+                app:buttonMode="regular"
+                app:roundedCorners="true"
+                app:showOutline="false" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>
