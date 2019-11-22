@@ -28,11 +28,11 @@
                 android:id="@+id/etName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tên sinh viên"
+                android:hint="@string/nameStudents"
                 android:imeOptions="actionNext"
                 android:paddingLeft="8dp"
                 android:singleLine="true"
-                android:textSize="13sp" />
+                android:textSize="@dimen/textSizeNormal" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -45,9 +45,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="Địa chỉ"
-                android:paddingLeft="8dp"
-                android:textSize="13sp" />
+                android:hint="@string/addressStudents"
+                android:paddingLeft="@dimen/padding8dp"
+                android:textSize="@dimen/textSizeNormal" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -56,18 +56,18 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:drawableLeft="@drawable/ic_date_range_green_24dp"
-            android:drawablePadding="8dp"
+            android:drawablePadding="@dimen/padding8dp"
             android:gravity="center_vertical"
-            android:paddingLeft="8dp"
-            android:text="Ngày sinh"
-            android:textSize="13sp" />
+            android:paddingLeft="@dimen/padding8dp"
+            android:text="@string/birthDateStudents"
+            android:textSize="@dimen/textSizeNormal" />
 
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:layout_marginLeft="4dp"
+            android:layout_marginLeft="@dimen/margin_4dp"
             android:layout_marginTop="@dimen/margin_4dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/margin_NearBest"
 
             android:background="@color/colorGray2" />
 
@@ -82,10 +82,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="Điểm toán"
+                android:hint="@string/pLiterature"
                 android:inputType="number"
-                android:paddingLeft="8dp"
-                android:textSize="13sp" />
+                android:paddingLeft="@dimen/padding8dp"
+                android:textSize="@dimen/textSizeNormal" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -98,60 +98,60 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="Điểm văn"
+                android:hint="@string/pMath"
                 android:inputType="number"
-                android:paddingLeft="8dp"
-                android:textSize="13sp" />
+                android:paddingLeft="@dimen/padding8dp"
+                android:textSize="@dimen/textSizeNormal" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="@dimen/margin_NearBest">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etEngLish"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="Điểm Anh"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:hint="@string/pEnglish"
                 android:inputType="number"
-                android:paddingLeft="8dp"
-                android:textSize="13sp" />
+                android:paddingLeft="@dimen/padding8dp"
+                android:textSize="@dimen/textSizeNormal" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="@dimen/margin_NearBest">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etClass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="Lớp"
+                android:layout_marginTop="@dimen/margin_4dp"
+                android:hint="@string/classStudents"
                 android:inputType="number"
-                android:paddingLeft="8dp"
-                android:textSize="13sp" />
+                android:paddingLeft="@dimen/padding8dp"
+                android:textSize="@dimen/textSizeNormal" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:id="@+id/etAverage"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:drawablePadding="8dp"
+            android:layout_height="@dimen/height_etAverage"
+            android:drawablePadding="@dimen/padding8dp"
             android:gravity="center_vertical"
-            android:paddingLeft="8dp"
-            android:text="Điểm trung bình"
-            android:textSize="13sp" />
+            android:paddingLeft="@dimen/padding8dp"
+            android:text="@string/pAverage"
+            android:textSize="@dimen/textSizeNormal" />
 
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:layout_marginLeft="4dp"
+            android:layout_marginLeft="@dimen/margin_4dp"
             android:layout_marginTop="@dimen/margin_4dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/margin_NearBest"
 
             android:background="@color/colorGray2" />
 
@@ -166,14 +166,8 @@
 
             <com.beardedhen.androidbootstrap.BootstrapButton
                 android:id="@+id/btCancel"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Hủy"
-                android:textColor="@color/colorWhite"
-                android:textSize="20sp"
+                style="@style/Button_Theme"
+                android:text="@string/cancel"
                 app:bootstrapBrand="danger"
                 app:bootstrapSize="lg"
                 app:buttonMode="regular"
@@ -182,13 +176,8 @@
 
             <com.beardedhen.androidbootstrap.BootstrapButton
                 android:id="@+id/btSave"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Lưu"
-                android:textColor="@color/colorWhite"
-                android:textSize="20sp"
+                style="@style/Button_Theme"
+                android:text="@string/save"
                 app:bootstrapBrand="success"
                 app:bootstrapSize="lg"
                 app:buttonMode="regular"

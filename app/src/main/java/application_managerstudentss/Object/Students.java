@@ -1,5 +1,7 @@
 package application_managerstudentss.Object;
 
+import android.util.Log;
+
 import java.io.Serializable;
 
 public class Students  extends People implements Serializable {
@@ -10,6 +12,7 @@ public class Students  extends People implements Serializable {
     private String studentClass;
 
     public Students() {
+        Log.d("BBB", "Students: "+pointAverage);
     }
 
     public Students(String name, String address, String birthDate, float pointLiterature, float pointMath, float pointEngLish, float pointAverage, String studentClass) {

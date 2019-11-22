@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
@@ -17,7 +16,7 @@ import androidx.fragment.app.Fragment;
 
 import application_managerstudentss.Activity.MainActivity;
 import application_managerstudentss.Object.Students;
-import application_managerstudentss.until;
+import application_managerstudentss.Until;
 import lac.hong.application_managerstudentss.R;
 import lac.hong.application_managerstudentss.databinding.AddStudentsFragmentBinding;
 
@@ -44,7 +43,7 @@ public class AddStudentsFragment extends Fragment {
                     pointLiterature = Float.parseFloat(binding.etLiterature.getText().toString());
                     pointMath = Float.parseFloat(binding.ettMath.getText().toString());
                     pointEngLish = Float.parseFloat(binding.etEngLish.getText().toString());
-                    pointAverage = until.pointAverage(pointLiterature, pointMath, pointEngLish);
+                    pointAverage = Until.pointAverage(pointLiterature, pointMath, pointEngLish);
                     studentsClass = binding.etClass.getText().toString().trim();
                     students.setName(name);
                     students.setAddress(address);
@@ -55,12 +54,12 @@ public class AddStudentsFragment extends Fragment {
                     students.setPointEngLish(pointEngLish);
                     students.setStudentClass(studentsClass);
                     MainActivity.listStudents.add(students);
-                    Log.d("BBB", "onClick: "+MainActivity.listStudents.get(3).getName());
+
                         Intent intent = new Intent(getActivity(), MainActivity.class);
                         startActivity(intent);
                         getActivity().finish();
                 }catch (Exception e){
-                    until.ShowToastLong("Không được để trống nội dung", getContext());
+                    Until.ShowToastLong(getString(R.string.emptyData), getContext());
                 }
 
             }
@@ -69,7 +68,7 @@ public class AddStudentsFragment extends Fragment {
         binding.etBirthdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("AAA", "onClick: bb");
+
                 DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(),
                         new DatePickerDialog.OnDateSetListener() {
                             @Override

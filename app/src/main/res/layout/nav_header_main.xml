@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
-            android:text="Nguyễn Mạnh Thắng"
+            android:text="@string/nameDeveloper"
             android:textColor="@color/colorBlack"
             android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_normal"
-            android:text="228 Minh Khai, Hai Bà Trưng, Hà Nội"
+            android:text="@string/addressDeveloper"
             android:textColor="@color/colorBlack" />
     </LinearLayout>
 

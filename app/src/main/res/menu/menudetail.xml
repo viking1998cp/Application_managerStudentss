@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/nav_delete"
-    android:title="Xóa"
+    android:title="@string/menu_delete"
     android:icon="@drawable/ic_delete_green_24dp"
     app:showAsAction="always"/>
     <item android:id="@+id/nav_edit"
-        android:title="Sửa"
+        android:title="@string/menu_edit"
         android:icon="@drawable/ic_edit_green_24dp"
         app:showAsAction="always"/>
 </menu>

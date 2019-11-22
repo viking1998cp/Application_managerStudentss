@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name="application_managerstudentss.Activity.DetailStudentsActivity"></activity>
+        <activity android:name="application_managerstudentss.Activity.DetailStudentsActivity"/>
         <activity android:name="application_managerstudentss.Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

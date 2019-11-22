@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="sizeBold">16</dimen>
+    <dimen name="height_etAverage">40dp</dimen>
+    <dimen name="heightButton">80dp</dimen>
+    <dimen name="textSize_NearBest">20sp</dimen>
+    <dimen name="imv80dp">80dp</dimen>
 </resources>

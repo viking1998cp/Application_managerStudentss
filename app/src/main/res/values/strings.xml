@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Application_managerStudentss</string>
-    <string name="title_add">Thêm sinh viên</string>
-    <string name="title_listStudents">Danh sách sinh viên</string>
+    <string name="app_name">Manager Students</string>
+    <string name="title_add">Thêm học sinh</string>
+    <string name="title_listStudents">Danh sách học sinh</string>
     <string name="back">Trở lại</string>
-    <string name="managerStudents">Quản lý sinh viên</string>
+    <string name="managerStudents">Quản lý học sinh</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="managerTeacher">Quản lý giáo viên</string>
@@ -11,4 +11,29 @@
     <string name="addStudents">Thêm học sinh</string>
     <string name="title_Detail">Chi tiết học sinh</string>
     <string name="DetailStudents">Chi tiết học sinh</string>
+    <string name="nameStudents">Họ tên học sinh</string>
+    <string name="addressStudents">Địa chỉ</string>
+    <string name="birthDateStudents">Ngày sinh</string>
+    <string name="pMath">Điểm toán</string>
+    <string name="pLiterature">Điểm văn</string>
+    <string name="pEnglish">Điểm anh</string>
+    <string name="classStudents">Lớp</string>
+    <string name="pAverage">Điểm trung bình</string>
+    <string name="nameStudentsDisplay">Họ và tên: \u0020</string>
+    <string name="addressStudentsDisplay">Địa chỉ: \u0020</string>
+    <string name="birthDateStudentsDisplay">Ngày sinh: \u0020</string>
+    <string name="pMathDisplay">Điểm toán: \u0020</string>
+    <string name="pLiteratureDisplay">Điểm văn: \u0020</string>
+    <string name="pEnglishDisplay">Điểm anh: \u0020</string>
+    <string name="classStudentsDisplay">Lớp: \u0020</string>
+    <string name="pAverageDisplay">Điểm trung bình: \u0020</string>
+    <string name="cancel">Hủy</string>
+    <string name="save">Lưu</string>
+    <string name="addNewStudents">Thêm mới học sinh</string>
+    <string name="nameDeveloper">Nguyễn Mạnh Thắng</string>
+    <string name="addressDeveloper">228 Minh Khai, Hai Bà Trưng, Hà Nội</string>
+    <string name="emptyData" >Không được để trống nội dung</string>
+    <string name="error" >Có lỗi vui lòng kiểm tra lại</string>
+    <string name="menu_delete">Xóa</string>
+    <string name="menu_edit">Sửa</string>
 </resources>

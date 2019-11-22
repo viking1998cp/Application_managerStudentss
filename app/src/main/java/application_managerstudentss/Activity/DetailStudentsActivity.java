@@ -5,7 +5,6 @@ import androidx.databinding.DataBindingUtil;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.opengl.Visibility;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -16,7 +15,7 @@ import android.view.View;
 import android.widget.DatePicker;
 
 import application_managerstudentss.Object.Students;
-import application_managerstudentss.until;
+import application_managerstudentss.Until;
 import lac.hong.application_managerstudentss.R;
 import lac.hong.application_managerstudentss.databinding.ActivityDetailStudentsBinding;
 
@@ -26,6 +25,7 @@ public class DetailStudentsActivity extends AppCompatActivity {
     ActivityDetailStudentsBinding binding;
     private String name, address, dateBirth, studentsClass;
     private float pointLiterature, pointMath, pointEngLish, pointAverage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,11 +43,11 @@ public class DetailStudentsActivity extends AppCompatActivity {
         binding.etName.setText(students.getName());
         binding.etAddress.setText(students.getAddress());
         binding.etBirthdate.setText(students.getBirthDate());
-        binding.etLiterature.setText(students.getPointLiterature()+"");
-        binding.ettMath.setText(students.getPointMath()+"");
-        binding.etEngLish.setText(students.getPointEngLish()+"");
+        binding.etLiterature.setText(students.getPointLiterature() + "");
+        binding.ettMath.setText(students.getPointMath() + "");
+        binding.etEngLish.setText(students.getPointEngLish() + "");
         binding.etClass.setText(students.getStudentClass());
-        binding.etAverage.setText(students.getPointAverage()+"");
+        binding.etAverage.setText(students.getPointAverage() + "");
         binding.lnEdit.setVisibility(View.GONE);
     }
 
@@ -114,7 +114,7 @@ public class DetailStudentsActivity extends AppCompatActivity {
                     pointLiterature = Float.parseFloat(binding.etLiterature.getText().toString());
                     pointMath = Float.parseFloat(binding.ettMath.getText().toString());
                     pointEngLish = Float.parseFloat(binding.etEngLish.getText().toString());
-                    pointAverage = until.pointAverage(pointLiterature, pointMath, pointEngLish);
+                    pointAverage = Until.pointAverage(pointLiterature, pointMath, pointEngLish);
                     dateBirth = binding.etBirthdate.getText().toString();
                     studentsClass = binding.etClass.getText().toString().trim();
                     students.setName(name);
@@ -125,12 +125,17 @@ public class DetailStudentsActivity extends AppCompatActivity {
                     students.setPointAverage(pointAverage);
                     students.setPointEngLish(pointEngLish);
                     students.setStudentClass(studentsClass);
-                    Intent intent = new Intent(DetailStudentsActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }catch (Exception e){
-                    Log.d("BBB", "onClick: "+e.getMessage());
-                    until.ShowToastLong("Không được để trống nội dung", DetailStudentsActivity.this);
+                    if (Until.checkNullObject(students)) {
+                        Intent intent = new Intent(DetailStudentsActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        Until.ShowToastLong(getString(R.string.emptyData), DetailStudentsActivity.this);
+                    }
+
+                } catch (Exception e) {
+                    Log.d("BBB", "onClick: " + e.getMessage());
+                    Until.ShowToastLong(getString(R.string.emptyData), DetailStudentsActivity.this);
                 }
 
             }
@@ -139,7 +144,6 @@ public class DetailStudentsActivity extends AppCompatActivity {
         binding.etBirthdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("AAA", "onClick: bb");
                 DatePickerDialog datePickerDialog = new DatePickerDialog(DetailStudentsActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
@@ -186,18 +190,20 @@ public class DetailStudentsActivity extends AppCompatActivity {
         binding.etAverage.setEnabled(true);
         binding.lnEdit.setVisibility(View.VISIBLE);
     }
-    public  void reloadAverage(){
-        if(!binding.etLiterature.getText().toString().isEmpty() &&
+
+    public void reloadAverage() {
+        if (!binding.etLiterature.getText().toString().isEmpty() &&
                 !binding.ettMath.getText().toString().isEmpty() &&
-                !binding.etEngLish.getText().toString().isEmpty()){
+                !binding.etEngLish.getText().toString().isEmpty()) {
             pointLiterature = Float.parseFloat(binding.etLiterature.getText().toString());
             pointMath = Float.parseFloat(binding.ettMath.getText().toString());
             pointEngLish = Float.parseFloat(binding.etEngLish.getText().toString());
-            pointAverage = until.pointAverage(pointLiterature, pointMath, pointEngLish);
-            binding.etAverage.setText(pointAverage+"");
+            pointAverage = Until.pointAverage(pointLiterature, pointMath, pointEngLish);
+            binding.etAverage.setText(pointAverage + "");
         }
 
     }
+
     private void ActionToolbar() {
         setSupportActionBar(binding.toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -208,24 +214,26 @@ public class DetailStudentsActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.nav_edit:
                 visibility();
                 break;
             case R.id.nav_delete:
                 MainActivity.listStudents.remove(id);
-                Intent intent =new Intent(DetailStudentsActivity.this, MainActivity.class);
+                Intent intent = new Intent(DetailStudentsActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menudetail,menu);
+        getMenuInflater().inflate(R.menu.menudetail, menu);
         return true;
     }
 }

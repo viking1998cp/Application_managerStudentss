@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,8 @@ import application_managerstudentss.Object.Students;
 
 import lac.hong.application_managerstudentss.R;
 import lac.hong.application_managerstudentss.databinding.ItemStudentsBinding;
+
+import static android.content.res.Resources.getSystem;
 
 public class AdapterRecyclerViewStudents extends RecyclerView.Adapter<AdapterRecyclerViewStudents.ItemRowHolder> {
     List<Students> listStudents ;
@@ -43,10 +46,10 @@ public class AdapterRecyclerViewStudents extends RecyclerView.Adapter<AdapterRec
     @Override
     public void onBindViewHolder(@NonNull ItemRowHolder holder, int position) {
         Students students = listStudents.get(position);
-        holder.binding.studentsName.setText("Họ và tên: "+students.getName());
-        holder.binding.studentsClass.setText("Lớp: "+students.getStudentClass());
-        holder.binding.studentsBirthDate.setText("Ngày sinh: "+students.getBirthDate());
-        holder.binding.studentsPoint.setText("Điểm trung bình: "+students.getPointAverage());
+        holder.binding.studentsName.setText(holder.binding.getRoot().getContext().getString(R.string.nameStudentsDisplay)+students.getName());
+        holder.binding.studentsClass.setText(holder.binding.getRoot().getContext().getString(R.string.classStudentsDisplay)+students.getStudentClass());
+        holder.binding.studentsBirthDate.setText(holder.binding.getRoot().getContext().getString(R.string.birthDateStudentsDisplay)+students.getBirthDate());
+        holder.binding.studentsPoint.setText(holder.binding.getRoot().getContext().getString(R.string.pAverageDisplay)+students.getPointAverage());
 
     }
 

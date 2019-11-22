@@ -8,19 +8,13 @@
         android:orientation="vertical">
 
 
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:id="@+id/pullToRefresh"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListStudents"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvListStudents"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_normal"
-                android:layout_marginBottom="@dimen/margin_best"
-                android:padding="@dimen/margin_normal" />
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_best"
+            android:padding="@dimen/margin_normal" />
 
 
     </LinearLayout>

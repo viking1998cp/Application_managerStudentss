@@ -16,8 +16,8 @@
             android:layout_height="wrap_content">
             <ImageView
                 android:src="@drawable/ic_male"
-                android:layout_width="80dp"
-                android:layout_height="80dp"  />
+                android:layout_width="@dimen/imv80dp"
+                android:layout_height="@dimen/imv80dp"  />
             <LinearLayout
                 android:layout_marginLeft="@dimen/margin_normal"
                 android:orientation="vertical"
@@ -28,8 +28,7 @@
                     android:textColor="@color/colorBlack"
                     android:id="@+id/studentsName"
                     android:gravity="center_vertical"
-                    android:textSize="14dp"
-                    android:text="Họ và tên"
+                    android:textSize="@dimen/textSizeNormal"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="0dp" />
@@ -37,8 +36,7 @@
                     android:textColor="@color/colorBlack"
                     android:id="@+id/studentsClass"
                     android:gravity="center_vertical"
-                    android:textSize="14dp"
-                    android:text="516100"
+                    android:textSize="@dimen/textSizeNormal"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="0dp" />
@@ -46,8 +44,7 @@
                     android:textColor="@color/colorBlack"
                     android:id="@+id/studentsBirthDate"
                     android:gravity="center_vertical"
-                    android:textSize="14dp"
-                    android:text="12/08/1998"
+                    android:textSize="@dimen/textSizeNormal"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="0dp" />
@@ -55,8 +52,7 @@
                     android:textColor="@color/colorBlack"
                     android:id="@+id/studentsPoint"
                     android:gravity="center_vertical"
-                    android:textSize="14dp"
-                    android:text="10.0"
+                    android:textSize="@dimen/textSizeNormal"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="0dp" />

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import application_managerstudentss.Fragment.AddStudentsFragment;
 import application_managerstudentss.Fragment.ListStudentsFragmet;
 import application_managerstudentss.Object.Students;
-import application_managerstudentss.until;
+import application_managerstudentss.Until;
 import lac.hong.application_managerstudentss.R;
 import lac.hong.application_managerstudentss.databinding.ActivityMainBinding;
 
@@ -35,9 +35,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //Demo data
         if(listStudents == null){
             listStudents = new ArrayList<>();
-            listStudents.add(new Students("Thắng","Cẩm Phả","12/08/1998",10,10,10, until.pointAverage(10,10,10),"516100"));
-            listStudents.add(new Students("Thắng","Cẩm Phả","12/08/1998",10,10,10,until.pointAverage(10,10,10),"516100"));
-            listStudents.add(new Students("VĂN","Cẩm Phả","12/08/1998",10,10,10,until.pointAverage(10,10,10),"516100"));
+            listStudents.add(new Students("Thắng","Cẩm Phả","12/08/1998",10,10,10, Until.pointAverage(10,10,10),"516100"));
+            listStudents.add(new Students("Thắng","Cẩm Phả","12/08/1998",10,10,10, Until.pointAverage(10,10,10),"516100"));
+            listStudents.add(new Students("VĂN","Cẩm Phả","12/08/1998",10,10,10, Until.pointAverage(10,10,10),"516100"));
+            Students students = new Students();
         }
 
         Actionbar();
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Quản lý học sinh");
+        getSupportActionBar().setTitle(getString(R.string.managerStudents));
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, binding.drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         binding.drawerLayout.addDrawerListener(toggle);

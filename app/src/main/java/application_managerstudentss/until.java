@@ -4,14 +4,15 @@ import android.content.Context;
 import android.widget.Toast;
 
 import application_managerstudentss.Object.Students;
+import lac.hong.application_managerstudentss.R;
 
-public class until {
+public class Until {
     public static float pointAverage(float pointLiterature, float pointMath, float pointEnglish) {
         return (pointEnglish + pointLiterature + pointMath) / 3;
     }
     public static void ShowToastLong(String msg, Context context) {
         if (msg.isEmpty()) {
-            msg = "Có lỗi xảy ra, vui lòng kểm tra kết nối internet";
+            msg = context.getString(R.string.error);
         }
         try {
             Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
@@ -23,10 +24,10 @@ public class until {
         if(students.getName().equalsIgnoreCase("") ||
                 students.getBirthDate().equalsIgnoreCase("") ||
                 students.getAddress().equalsIgnoreCase("") ||
-                students.getPointAverage() ==0 ||
-                students.getPointEngLish() ==0 ||
-                students.getPointLiterature() ==0 ||
-                students.getPointMath() ==0 ||
+                students.getPointAverage() == 0.0 ||
+                students.getPointEngLish() == 0.0 ||
+                students.getPointLiterature() ==0.0 ||
+                students.getPointMath() ==0.0 ||
                 students.getStudentClass().equalsIgnoreCase("")){
             return false;
 
